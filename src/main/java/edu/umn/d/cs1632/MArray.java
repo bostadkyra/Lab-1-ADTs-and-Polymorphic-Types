@@ -42,5 +42,6 @@ class MArray {
         catch (Exception e) {
             e.printStackTrace();
         }
+        Query.userInput();
     }
 }
