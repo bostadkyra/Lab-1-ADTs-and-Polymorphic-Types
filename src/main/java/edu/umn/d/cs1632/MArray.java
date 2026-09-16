@@ -8,7 +8,6 @@ import java.util.List;
 
 class MArray {
     ArrayList<ArrayList<Value>> data = new ArrayList<>();
-    String type;
     private MArray() {}
     public MArray(String fileName) {
         try {
@@ -42,6 +41,6 @@ class MArray {
         catch (Exception e) {
             e.printStackTrace();
         }
-        Query.userInput();
+        Main.userInput(data);
     }
 }
