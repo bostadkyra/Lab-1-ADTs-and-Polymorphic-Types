@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 class MArray {
-    ArrayList<Value> row = new ArrayList<>();
     ArrayList<ArrayList<Value>> data = new ArrayList<>();
     String type;
     private MArray() {}
@@ -17,6 +16,7 @@ class MArray {
             CSVReader csvReader = new CSVReader(filereader);
             List<String[]> allData = csvReader.readAll();
             for (String[] row : allData) { //row
+                ArrayList<Value> line = new ArrayList<>();
                 for (String cell : row) { //column
                     Value element;
                     try{
@@ -32,8 +32,10 @@ class MArray {
                             element = new StringValue();
                         }
                     }
+                    line.add(element);
                     System.out.print(cell + element.type() + "\t");
                 }
+                data.add(line);
                 System.out.println();
             }
         }
