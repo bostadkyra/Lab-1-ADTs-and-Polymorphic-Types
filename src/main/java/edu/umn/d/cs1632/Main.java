@@ -23,6 +23,8 @@ public class Main {
 
             try{
                 switch(letterCommand){
+                    case "Q":
+                        break;
                     case "V":
                         int col = Integer.parseInt(responseParts[1]);
                         int rowStart = Integer.parseInt(responseParts[2]);
@@ -33,25 +35,27 @@ public class Main {
                         int colStart = Integer.parseInt(responseParts[2]);
                         int colEnd = Integer.parseInt(responseParts[3]);
                         System.out.println(typeHorizontal(row, colStart, colEnd));
+                    case "M":
+                        int mRowStart = Integer.parseInt(responseParts[1]);
+                        int mRowEnd = Integer.parseInt(responseParts[2]);
+                        int mColStart = Integer.parseInt(responseParts[3]);
+                        int mColEnd = Integer.parseInt(responseParts[4]);
+                        System.out.println(typeMatrix(mRowStart, mRowEnd, mColStart, mColEnd));
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid number format. Please try again.");
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Index out of bounds. Please check your row/column values.");
             }
-
-            if (response.equalsIgnoreCase("Q")){
-                break;
-            }
+            scanner.close(); //closing scanner to free system resources
         }
-        scanner.close();
     }
 
     private static String typeVertical(int col, int rowStart, int rowEnd){
         String assumedType = null;
 
-        for (int i = rowStart; i <= rowEnd; i++){
-            String cellType = data.get(i).get(col).queryType();
+        for (int r = rowStart; r <= rowEnd; r++){
+            String cellType = data.get(r).get(col).queryType();
             if (assumedType == null){
                 assumedType = cellType;
             } else if (!assumedType.equals(cellType)) {
@@ -64,12 +68,28 @@ public class Main {
     private static String typeHorizontal(int row, int colStart, int colEnd){
         String assumedType = null;
 
-        for (int i = colStart; i <= colEnd; i++){
-            String cellType = data.get(i).get(row).queryType();
+        for (int c = colStart; c <= colEnd; c++){
+            String cellType = data.get(c).get(row).queryType();
             if (assumedType == null){
                 assumedType = cellType;
             } else if (!assumedType.equals(cellType)) {
                 return "Multi";
+            }
+        }
+        return assumedType != null ? assumedType : "Empty"; //replaces if else block
+    }
+
+    private static String typeMatrix(int rowStart, int rowEnd, int colStart, int colEnd){
+        String assumedType = null;
+
+        for (int r = rowStart; r <= rowEnd; r++){
+            for (int c = colStart; c <= colEnd; c++){
+                String cellType = data.get(r).get(c).queryType();
+                if (assumedType == null){
+                    assumedType = cellType;
+                } else if (!assumedType.equals(cellType)) {
+                    return "Multi";
+                }
             }
         }
         return assumedType != null ? assumedType : "Empty"; //replaces if else block
