@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69b76c8d-8d73-41b5-a199-21cec0a7c80b" name="Changes" comment="Added scanner for user input and began coding the while loop for queries.">
+    <list default="true" id="69b76c8d-8d73-41b5-a199-21cec0a7c80b" name="Changes" comment="Moved code for queries to the Main class as I read that is where they want the code rather than in a separate class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/MArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/MArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/DoubleValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/DoubleValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/IntValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/IntValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/StringValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/StringValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/umn/d/cs1632/Value.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/DoubleValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/DoubleValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/IntValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/IntValue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/MArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/MArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/StringValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/StringValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/Value.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/umn/d/cs1632/Value.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +114,7 @@
       <updated>1788978149488</updated>
       <workItem from="1788978151680" duration="6490000" />
       <workItem from="1789577916825" duration="3921000" />
-      <workItem from="1789582212716" duration="5590000" />
+      <workItem from="1789582212716" duration="7571000" />
     </task>
     <task id="LOCAL-00001" summary="Added Value as an abstract parent class and IntValue, DoubleValue, and StringValue as child classes.">
       <option name="closed" value="true" />
@@ -163,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789598236117</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Moved code for queries to the Main class as I read that is where they want the code rather than in a separate class.">
+      <option name="closed" value="true" />
+      <created>1789601270807</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1789601270807</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +191,7 @@
     <MESSAGE value="Added coding to see if the value in the cell was an int, double, or string. Added .type() to each subclass and the abstract .type() to the superclass." />
     <MESSAGE value="Added code so the file was saved row by row then added to a 2D array." />
     <MESSAGE value="Added scanner for user input and began coding the while loop for queries." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added scanner for user input and began coding the while loop for queries." />
+    <MESSAGE value="Moved code for queries to the Main class as I read that is where they want the code rather than in a separate class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved code for queries to the Main class as I read that is where they want the code rather than in a separate class." />
   </component>
 </project>

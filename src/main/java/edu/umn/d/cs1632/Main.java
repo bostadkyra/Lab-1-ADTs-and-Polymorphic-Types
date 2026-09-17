@@ -46,13 +46,13 @@ public class Main {
         String assumedType = null;
 
         for (int r = rowStart; r <= rowEnd; r++){
-            String cellType = data.get(r).get(col).type();
+            String cellType = data.get(r).get(col).queryType();
             if (assumedType == null){
                 assumedType = cellType;
             } else if (!assumedType.equals(cellType)) {
                 return "Multi";
             }
         }
-        return assumedType != null ? assumedType : "Empty";
+        return assumedType != null ? assumedType : "Empty"; //replaces if else block
     }
 }

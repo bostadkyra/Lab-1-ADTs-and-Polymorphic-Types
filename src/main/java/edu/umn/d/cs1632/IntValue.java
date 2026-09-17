@@ -5,4 +5,5 @@ public class IntValue extends Value{
     public String type() {
         return "(I)";
     }
+    public String queryType() {return "Int";}
 }

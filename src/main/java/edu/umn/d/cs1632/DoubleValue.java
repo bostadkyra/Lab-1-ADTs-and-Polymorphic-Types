@@ -5,4 +5,5 @@ public class DoubleValue extends Value{
     public String type() {
         return "(D)";
     }
+    public String queryType(){return "Double";}
 }

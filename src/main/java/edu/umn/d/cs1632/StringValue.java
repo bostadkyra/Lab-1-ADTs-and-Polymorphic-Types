@@ -5,4 +5,5 @@ public class StringValue extends Value{
     public String type() {
         return "(S)";
     }
+    public String queryType() {return "String";}
 }
